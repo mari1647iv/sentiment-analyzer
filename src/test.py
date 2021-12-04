@@ -24,22 +24,21 @@ total, pos, neg, neut = analyze_comments(
 print('Total processed: '+str(total))
 print('Positive comments: '+str(pos))
 print('Negative comments: '+str(neg))
-print('Neutral comments: '+str(neut))
-
-maxc = max(pos, neg, neut)
-if maxc == neut:
-    print("Communication is mostly neutral.")
-    print("In other cases:")
-    maxc = max(pos, neg)
-if maxc == pos:
-    print("Communication is mostly positive.\n")
-else:
-    print("Communication is mostly negative. Some measures should be considered.\n")
-
+print('Neutral comments: '+str(neut)+'\n')
 
 labels = 'Positive\n'+str(pos), 'Negative\n'+str(neg), 'Neutral\n'+str(neut)
 sizes = [pos, neg, neut]
-explode = (0.025, 0.025, 0.025)
+maxc = max(pos, neg, neut)
+
+if maxc == neut:
+    res = "neutral"
+    explode = (0, 0, 0.1)
+elif maxc == pos:
+    res = "positive"
+    explode = (0.1, 0, 0)
+else:
+    res = "negative. Some measures should be considered"
+    explode = (0, 0.1, 0)
 
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
@@ -47,3 +46,4 @@ ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 plt.show()
+print("Communication is mostly "+res+".\n")
