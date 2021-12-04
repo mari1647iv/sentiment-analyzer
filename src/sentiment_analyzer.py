@@ -16,20 +16,39 @@ Import Pyhton API Requests library.
 import matplotlib.pyplot as plt
 import requests
 
-"""
-analyze_comments_page - helping function to analyze one page of GitHub comments.
-The following parameters are used:
-
-*   $username$ - GitHub alias of the repository owner;
-*   $repo$ - GitHub repository name;
-*   $per\_page$ - number of comments on the page (from 0 to 100);
-*   $page$ - Page number of the results to fetch;
-*   $print\_comments$ - boolean flag. If it is set to True, each fetched comment and its analysis will be printed.
-*   $print\_stage\_results$ - boolean flag. If it's set to True, final statistics of the analyzed comments will be printend in the end.
-"""
-
 
 def analyze_comments_page(username, repo, per_page, page, print_comments, print_stage_results):
+    """
+    Analyzes one page of GitHub comments. Helping function.
+
+    Parameters
+    ----------
+
+    username : str
+        The GitHub alias of the repository owner
+    repo : str
+        The GitHub repository name
+    per_page : int
+        The number of comments on the page (from 0 to 100)
+    page : int
+        The page number of the results to fetch
+    print_comments : bool
+        If True, each fetched comment and its analysis will be printed
+    print_stage_results : bool
+        If True, final statistics of the analyzed comments will be printend in the end
+
+    Returns
+    -------
+    total : int
+        The number of comments fetched (if number of comments on the page is less than per_page parameter all the available comments will be processed and their number will be returned. Else, equal to per_page)
+    pos : int
+        The number of positive comments fetched
+    neg : int
+        The number of negative comments fetched
+    neut : int
+        The number of neutral comments fetched
+    """
+
     total = 0
     pos = 0
     neg = 0
@@ -70,20 +89,37 @@ def analyze_comments_page(username, repo, per_page, page, print_comments, print_
     return total, pos, neg, neut
 
 
-"""
-analyze_comments - the final function to be used. It analyzes the given number of comments in the given repository. The following parameters are used:
-
-*   $username$ - GitHub alias of the repository owner;
-*   $repo$ - GitHub repository name;
-*   $comments\_to\_process$ - number of comments to be fetched.
-*   $print\_comments$ - boolean flag. If it is set to True, each fetched comment and its analysis will be printed.
-*   $print\_stage\_results$ - boolean flag. If it's set to True, statistics of the analyzed comments on each stage(for each fetched page) will be printend.
-
-Function returns tuple of number of fetched in total(if number of comments in repo is less than $comments\_to\_process$ all the available comments will be processed), positive, negative and neutral comments.
-"""
-
-
+# the final function to be used
 def analyze_comments(username, repo, comments_to_process, print_comments, print_stage_results):
+    """
+    Analyzes the given number of comments in the given repository.
+
+    Parameters
+    ----------
+
+    username : str
+        The GitHub alias of the repository owner
+    repo : str
+        The GitHub repository name
+    comments_to_process : int
+        The number of comments to be fetched
+    print_comments : bool
+        If True, each fetched comment and its analysis will be printed
+    print_stage_results : bool
+        If True, statistics of the analyzed comments on each stage(for each fetched page) will be printend
+
+    Returns
+    -------
+    total : int
+        The number of comments fetched (if number of comments in repo is less than comments_to_process parameter all the available comments will be processed and their number will be returned. Else, equal to comments_to_process)
+    pos : int
+        The number of positive comments fetched
+    neg : int
+        The number of negative comments fetched
+    neut : int
+        The number of neutral comments fetched
+    """
+
     total = 0
     pos = 0
     neg = 0
