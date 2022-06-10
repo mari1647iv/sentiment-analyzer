@@ -14,10 +14,10 @@ The code also could be found on  https://colab.research.google.com/drive/1oa9_jo
 
 ## Results
 
-We analyzed 500 comments
+We analyzed ~15k comments
 
 Please check the summary below:
 
-![image](https://user-images.githubusercontent.com/29367818/144709973-d1e63cb5-561e-490c-a1e3-92c7fb0e7142.png)
+![image](./img/rq2/resolved_issues.png)
 
 
