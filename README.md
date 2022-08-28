@@ -1,7 +1,10 @@
 # sentiment-analyzer
 Github comments sentiment anlysis via NLTK(www.text-processing.com) and GitHub API
 
-The code also could be found on  https://colab.research.google.com/drive/1oa9_joAGwFQacIe9OJoBcgG1QiGTipA6?usp=sharing
+The code also could be found on  
+* https://colab.research.google.com/drive/1oa9_joAGwFQacIe9OJoBcgG1QiGTipA6?usp=sharing
+* https://colab.research.google.com/drive/1qKjb9wMairmYAKYWHeWPnYiIFOn0hglB?usp=sharing
+* https://drive.google.com/file/d/1Farif7X2IcfS5L3f6vOTu7dOGi0YEapH/view
 
 ## Proccess
 
