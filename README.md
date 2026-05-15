@@ -16,8 +16,15 @@ The code also could be found on
 
 ## Results
 
-We analyzed ~15k comments. The summary is presented below:
+We analyzed ~15k comments. The summary is presented below.
+
+### Resolved vs Open issues
 
 ![image](./img/rq2/resolved_issues.png)
+![image](./img/rq2/open_issues.png)
 
+### Fraction of resoled issues within each sentiment
 
+![image](./img/rq2/negative_issues.png)
+![image](./img/rq2/neutral_issues.png)
+![image](./img/rq2/positive_issues.png)
