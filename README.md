@@ -1,4 +1,4 @@
-# sentiment-analyzer
+# sentiment analyzer
 Github comments sentiment anlysis via NLTK(www.text-processing.com) and GitHub API
 
 The code also could be found on  
@@ -8,18 +8,15 @@ The code also could be found on
 
 ## Proccess
 
-1. We extract the github comments from https://github.com/ubuntu/microk8s repository
-2. We process the comments using NLTK tool since they have open API that is comfortable to use
- 
- NLTK returns the probablity of the comment being positive, negative or neutral
- 
-4. We analyze the results
+1. We extract the github comments from repository via Github API.
+2. We prerocess the comments using NLTK toolkit since they have open API that is comfortable to use.
+3. NLTK returns the probablity of the comment being positive, negative or neutral. The label is assigned for the further model precision measurement.
+4. We train and tune our model on the 70% of the comments dataset and test it against the remaining 30%.
+5. We gather the sentiment metrics from the dataset with issue-structured comments and analyze the results.
 
 ## Results
 
-We analyzed ~15k comments
-
-Please check the summary below:
+We analyzed ~15k comments. The summary is presented below:
 
 ![image](./img/rq2/resolved_issues.png)
 
