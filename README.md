@@ -33,4 +33,4 @@ We analyzed ~15k comments. The summary is presented below.
 
 
 ![image](./img/rq3/overall_statistic/average_issues_time.png)
-![image](./img/rq4/overall_statistic/average_discussion_length.png)
+![image]("./img/rq4/overall_statistic/average_discussions_length_overall (without empty disc-s).png")
