@@ -29,7 +29,7 @@ We analyzed ~15k comments. The summary is presented below.
 ![image](./img/rq2/neutral_issues.png)
 ![image](./img/rq2/positive_issues.png)
 
-## Time and length of discussion per sentiment
+### Time and length of discussion per sentiment
 
 
 ![image](./img/rq3/overall_statistic/average_issues_time.png)
